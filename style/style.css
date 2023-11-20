@@ -764,4 +764,8 @@ footer nav a:hover svg {
         margin-top: 20px;
     }
 
+    .cardBlock:last-child .itemCard:nth-child(1) .img {
+        background-position: top;
+    }
+
 }
