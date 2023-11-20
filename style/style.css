@@ -1,0 +1,766 @@
+@font-face {
+    src: url(../fonts/ChinaCyr.ttf);
+    font-family: 'ChinaCyr';
+}
+
+@font-face {
+    src: url(../fonts/MontserratAlternates-Light.ttf);
+    font-family: 'MontserratAltLight';
+}
+
+@font-face {
+    src: url(../fonts/MontserratAlternates-Regular.ttf);
+    font-family: 'MontserratAltRegular';
+}
+
+@font-face {
+    src: url(../fonts/MontserratAlternates-SemiBold.ttf);
+    font-family: 'MontserratAltSB';
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3 {
+    font-family: 'ChinaCyr', serif;
+    letter-spacing: 2px;
+}
+
+h2 {
+    margin: clamp(1.875rem, 1.648rem + 1.14vw, 2.5rem) 0;
+    font-size: clamp(2rem, 0.909rem + 5.45vw, 5rem);
+    line-height: 130%;
+}
+
+h3 {
+    font-size: 32px;
+}
+
+p {
+    font-family: 'MontserratAltLight', serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.container {
+    width: clamp(300px, 8.333rem + 55.56vw, 1200px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* HEADER */
+
+header {
+    background: #ffffff;
+    height: 90px;
+    display: grid;
+    place-content: center;
+}
+
+header .header-container {
+    width: clamp(300px, 100vw , 1200px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header a {
+    font-family: 'MontserratAltRegular', serif;
+    font-size: 28px;
+    color: black;
+    border-bottom: 2px solid transparent;
+}
+
+header nav a:hover {
+    border-bottom: 2px solid black;
+}
+
+header nav {
+    width: clamp(11.25rem, -0.568rem + 59.09vw, 43.75rem);
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 75px;
+    width: 322px;
+    background-image: url("../img/logoHeader.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.logo a {
+    width: 100%;
+    height: 100%;
+}
+
+/* WELCOME SECTION */
+
+
+.welcome {
+    position: relative;
+    color: white;
+    background-image: url("../img/bg.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.welcome .container {
+    margin: 150px 0 0 0;
+}
+
+.welcome h1 {
+    font-size: clamp(1.5rem, 0.227rem + 6.36vw, 5rem);
+    line-height: 115%;
+    text-shadow: 2px 4px black;
+}
+
+.welcome p {
+    font-family: 'MontserratAltLight', serif;
+    font-size: clamp(1rem, 0.545rem + 2.27vw, 2.25rem);
+    margin: 55px 0 90px 0;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.75);
+}
+
+.welcome a {
+    font-family: 'MontserratAltRegular', serif;
+    font-size: clamp(1rem, 0.699rem + 1.6vw, 2.625rem);
+    padding: 20px 15px;
+    border: 3px solid #F2C895;
+    border-radius: 12px;
+    color: white;
+    margin-bottom: 180px;
+}
+
+.welcome a:hover {
+    background: #F2C895;
+    color: black;
+    transition: .15s;
+}
+
+.welcome .leftImg {
+    position: absolute;
+    bottom: 100px;
+    left: -50px;
+    animation: showLeft 1.5s;
+}
+
+.welcome .rightImg {
+    position: absolute;
+    bottom: 100px;
+    right: -50px;
+    transform: scale(-1, 1);
+    animation: showRight 1.5s;
+}
+
+@keyframes showLeft {
+    from {left: -100%; transform: rotate(180deg);}
+    to {left: -50px;}
+}
+
+@keyframes showRight {
+    from {right: -100%; transform: rotate(180deg);}
+    to {right: -50px;}
+}
+
+/* MENU */
+
+.menu {
+    background: #F2C895;
+}
+
+.menu .slider {
+    width: 1010px;
+    overflow: hidden;
+    border-radius: 20px 20px 0 0;
+}
+
+.menu .slider-line {
+    display: flex;
+    width: max-content;
+    position: relative;
+    left: 0;
+    transition: 1s;
+}
+
+.menu .cardBlock:nth-child(2) {
+    margin: 0 calc(1010px - 465px * 2);
+}
+
+.menu .cardBlock {
+    display: flex;
+    width: 1010px;
+    justify-content: space-between;
+}
+
+.itemCard {
+    width: 465px;
+}
+
+.itemCard .img {
+    width: 100%;
+    height: 420px;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+}
+
+.itemCard .description {
+    text-align: left;
+}
+
+.itemCard .description h3 {
+    margin: 18px 0 12px 0;
+    line-height: 115%;
+}
+
+.itemCard .description h6 {
+    font-family: 'MontserratAltLight', serif;
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 12px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: max-content;
+}
+
+.itemCard .description p {
+    font-family: 'MontserratAltLight', serif;
+    font-size: 24px;
+    line-height: 110%;
+}
+
+.cardBlock:first-child .itemCard:nth-child(1) .img {
+    background-image: url("../img/цзяоцзы.jfif");
+}
+
+.cardBlock:first-child .itemCard:nth-child(2) .img {
+    background-image: url("../img/баоцзы.png");
+}
+
+.cardBlock:nth-child(2) .itemCard:nth-child(1) .img {
+    background-image: url("../img/вонтоны.jfif");
+}
+
+.cardBlock:nth-child(2) .itemCard:nth-child(2) .img {
+    background-image: url("../img/димсам.jfif");
+}
+
+.cardBlock:last-child .itemCard:nth-child(1) .img {
+    background-image: url("../img/цзяоцзы.jfif");
+}
+
+.cardBlock:last-child .itemCard:nth-child(2) .img {
+    background-image: url("../img/баоцзы.png");
+}
+
+.menu .slider-buttons {
+    display: flex;
+    margin: 50px 0;
+}
+
+.menu .slider-buttons button {
+    width: 160px;
+    height: 20px;
+    border-radius: 8px;
+    background-color: #DC9E60;
+    border: none;
+    cursor: pointer;
+}
+
+.menu .slider-buttons button:first-child {
+    background-color: #624625;
+}
+
+.menu .slider-buttons button:nth-child(2) {
+    margin: 0 20px;
+}
+
+/* GALLERY */
+
+.gallery {
+    background: #624625;
+}
+
+.gallery h2 {
+    color: white;
+    width: 85%;
+}
+
+.gallery p {
+    font-size: clamp(1rem, 0.818rem + 0.91vw, 1.5rem);
+    font-family: 'MontserratAltLight', serif;
+    color: white;
+    width: 92%;
+}
+
+.gallery .galleryBlock {
+    display: grid;
+    grid-template-rows: repeat(2, clamp(9.375rem, 4.148rem + 26.14vw, 23.75rem));
+    grid-template-columns: repeat(3, clamp(9.375rem, 4.148rem + 26.14vw, 23.75rem));
+    gap: 10px;
+    margin: 50px 0 50px 0;
+}
+
+.galleryBlock .img {
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+
+.galleryBlock .img:nth-child(1) {
+    background-image: url("../img/gal1.png");
+}
+
+.galleryBlock .img:nth-child(2) {
+    background-image: url("../img/gal2.png");
+}
+
+.galleryBlock .img:nth-child(3) {
+    background-image: url("../img/gal3.png");
+}
+
+.galleryBlock .img:nth-child(4) {
+    background-image: url("../img/gal4.png");
+}
+
+.galleryBlock .img:nth-child(5) {
+    background-image: url("../img/gal5.png");
+}
+
+.galleryBlock .img:nth-child(6) {
+    background-image: url("../img/gal6.png");
+}
+
+/* CONTACTS */
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #F2C895;
+}
+
+.mapContainer {
+    width: 100%;
+    height: 450px;
+    position: relative;
+    margin-bottom: 80px;
+}
+
+.mapContainer .filter {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(98, 70, 37, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: grid;
+    place-content: center;
+}
+
+.mapContainer .filter .container {
+    align-items: start;
+}
+
+.mapContainer .filter .container h4 {
+    color: white;
+    font-family: 'MontserratAltSB', serif;
+    font-size: clamp(1.875rem, 1.528rem + 1.85vw, 3.75rem);
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 80px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.mapContainer iframe {
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+
+.mapContainer:hover .filter {
+    animation: vanish linear .3s forwards;
+}
+
+@keyframes vanish {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
+/* FEEDBACK */
+
+.feedback {
+    background: #624625;
+}
+
+.feedback h2 {
+    color: white;
+}
+
+.feedback form {
+    width: 100%;
+}
+
+.feedback .input-line {
+    display: flex;
+    justify-content: space-between;
+}
+
+.feedback .input-line .item {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 30%;
+}
+
+.feedback label {
+    color: white;
+    font-family: 'MontserratAltLight', serif;
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.feedback .input-line .item input {
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    padding: 0 10px;
+    font-size: 20px;
+}
+
+.feedback .messageContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin: 20px 0 0 0;
+}
+
+.feedback .messageContainer textarea {
+    width: 100%;
+    height: 200px;
+    border-radius: 4px;
+    outline: none;
+    padding: 10px;
+    font-size: 24px;
+    font-family: 'Helvetica', Arial, Lucida Grande, sans-serif;;
+    resize: vertical;
+}
+
+.feedback button {
+    margin: 40px 0;
+    padding: 15px 20px;
+    border: 2px solid #F2C895;
+    background: transparent;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    font-family: 'MontserratAltRegular', serif;
+    display: flex;
+    justify-self: start;
+    cursor: pointer;
+}
+
+.feedback button:hover {
+    background: #F2C895;
+    color: black;
+    transition: .15s;
+}
+
+/* FOOTER */
+
+footer {
+    display: grid;
+    place-content: center;
+    height: 120px;
+    background: #DC9E60;
+}
+
+footer .container {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+footer .logoLink {
+    height: 80px;
+    width: 302px;
+}
+
+footer .logo {
+    background-image: url("../img/logoFooter.png");
+}
+
+footer p {
+    font-family: 'MontserratAltRegular', serif;
+    font-size: 16px;
+    width: clamp(20rem, 19.306rem + 3.7vw, 23.75rem);
+}
+
+footer nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 250px;
+}
+
+footer nav a {
+    width: 20%;
+    display: grid;
+    place-content: center;
+}
+
+footer svg {
+    height: 40px;
+    width: 40px;
+    transition: .15s;
+}
+
+footer nav a:hover svg {
+    fill: white;
+    transition: .15s;
+}
+
+/* MEDIA QUERY */
+
+@media (max-width: 1800px) {
+    .welcome img {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+
+    h3 {
+        font-size: 24px;
+    }
+
+    .logo {
+        height: 60px;
+        width: 310px;
+    }
+
+    header {
+        height: max-content;
+        padding: 10px 0;
+    }
+
+    header a {
+        font-size: 18px;
+    }
+
+    header .header-container {
+        flex-direction: column;
+    }
+
+    header nav {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-top: 10px;
+    }
+
+    header nav a {
+        margin-top: 5px;
+    }
+
+    .welcome h1 {
+        text-shadow: 2px 2px black;
+    }
+
+    .welcome .container {
+        margin-top: 100px;
+    }
+
+    .welcome p {
+        margin: 50px 0 70px 0;
+    }
+
+    .welcome a {
+        margin-bottom: 100px;
+    }
+
+    .menu .cardBlock, .menu .slider {
+        width: 380px;
+    }
+
+    .menu .slider {
+        border-radius: 10px 10px 0 0;
+    }
+
+    .menu .cardBlock:nth-child(2) {
+        margin: 0 calc(380px - 180px * 2);
+    }
+
+    .itemCard {
+        width: 180px;
+    }
+
+    .itemCard .img {
+        border-radius: 10px;
+        height: 180px;
+    }
+
+    .itemCard .description p {
+        font-size: 16px;
+        line-height: 115%;
+    }
+
+    .itemCard .description h6 {
+        font-size: 16px;
+        border-radius: 8px;
+    }
+
+    .menu .slider-buttons button {
+        width: 100px;
+    }
+
+    .gallery h2 {
+        width: 100%;
+    }
+
+    .gallery p {
+        width: 100%;
+    }
+
+    .gallery .galleryBlock {
+        grid-template-rows: repeat(3, clamp(9.375rem, 4.148rem + 26.14vw, 23.75rem));
+        grid-template-columns: repeat(2, clamp(9.375rem, 4.148rem + 26.14vw, 23.75rem));
+        margin: 40px 0 40px 0;
+    }
+
+    .mapContainer .filter .container {
+        align-items: center;
+    }
+
+    .feedback form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .feedback .input-line {
+        flex-direction: column;
+    }
+
+    .feedback .input-line .item {
+        width: 100%;
+    }
+
+    .feedback .input-line .item:nth-child(2) {
+        margin: 14px 0;
+    }
+
+    .feedback .messageContainer {
+        margin-top: 14px;
+    }
+
+    .feedback label {
+        margin-bottom: 8px;
+        font-size: 20px;
+    }
+
+    .feedback .messageContainer textarea {
+        height: 140px;
+        font-size: 20px;
+        width: 100%;
+    }
+
+    .feedback button {
+        margin: 30px 0;
+        text-align: center;
+        display: block;
+    }
+
+    footer {
+        height: max-content;
+        padding: 20px 0;
+    }
+
+    footer .container {
+        flex-direction: column;
+    }
+
+    footer .logoLink {
+        display: none;
+    }
+
+    footer nav {
+        margin-top: 20px;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    .menu {
+        padding-bottom: 30px;
+    }
+
+    .menu .cardBlock, .menu .slider {
+        width: 300px;
+    }
+
+    .itemCard {
+        width: 100%;
+    }
+
+    .menu .slider-buttons {
+        display: none;
+    }
+
+    .menu .slider-line {
+        flex-direction: column;
+    }
+
+    .menu .cardBlock:nth-child(2) {
+        margin: 20px 0;
+    }
+
+    .menu .cardBlock {
+        flex-direction: column;
+    }
+
+    .itemCard .description h3 {
+        font-size: 20px;
+    }
+
+    .menu .cardBlock .itemCard:last-child {
+        margin-top: 20px;
+    }
+
+}
