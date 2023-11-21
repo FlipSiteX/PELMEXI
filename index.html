@@ -17,10 +17,10 @@
                 <div class="logo"></div>
             </a>
             <nav>
-                <a href="#menuBlock">Меню</a>
-                <a href="#galleryBlock">Галерея</a>
-                <a href="#contactsBlock">Контакты</a>
-                <a href="#feedbackBlock">Обратная связь</a>
+                <a href="#menuBlock" class="anchor">Меню</a>
+                <a href="#galleryBlock" class="anchor">Галерея</a>
+                <a href="#contactsBlock" class="anchor">Контакты</a>
+                <a href="#feedbackBlock" class="anchor">Обратная связь</a>
             </nav>
         </div>
     </header>
@@ -30,7 +30,7 @@
             <div class="container">
                 <h1>Добро пожаловать в мир китайских пельменей</h1>
                 <p>Наша пельменная - это оазис вкуса, где вы сможете насладиться аутентичными китайскими пельменями, приготовленными с любовью и мастерством.</p>
-                <a href="#menuBlock">Выбрать свой пельмень</a>
+                <a href="#menuBlock" class="anchor">Выбрать свой пельмень</a>
             </div>
             <img src="./img/pelmen.png" alt="pelmen" class="leftImg">
             <img src="./img/pelmen.png" alt="pelmen" class="rightImg">
@@ -39,6 +39,18 @@
             <div class="container">
                 <h2>МЕНЮ</h2>
                 <div class="slider">
+                    <div class="selectCategory">
+                        <div class="filterIcon">
+                            <img src="./img/filter-filled-tool-symbol.png" alt="filterIcon">
+                        </div>
+                        <select id="foodCategory">
+                            <option value="">Пельмени</option>
+                            <option value="">Закуски</option>
+                            <option value="">Салаты</option>
+                            <option value="">Напитки</option>
+                        </select>
+                    </div>
+
                     <div class="slider-line">
                         <div class="cardBlock" id="firstCard">
                             <div class="itemCard">
@@ -63,7 +75,7 @@
                                 <div class="img"></div>
                                 <div class="description">
                                     <h3>Вонтоны</h3>
-                                    <p>Готовят из тонкого рисового теста. Внутрь кладут мясо, морепродукты, грибы, овощи или тофу. Для сладкоежек отлично подойдут сладкие вонтоны: подаются холодными, а внутрь кладут орехи, ягоды или фрукты.</p>
+                                    <p>Готовят из тонкого рисового теста. Внутрь кладут мясо, морепродукты, грибы, овощи или тофу. Для сладкоежек отлично подойдут сладкие вонтоны c орехами, ягодами или фруктами.</p>
                                     <h6>600₽ / 6 шт.</h6>
                                 </div>
                             </div>
@@ -71,7 +83,7 @@
                                 <div class="img"></div>
                                 <div class="description">
                                     <h3>Димсам</h3>
-                                    <p>Димсамы делают из свинины и китайской капусты, морепродуктов или фруктов. Готовят их из недрожжевого теста без яиц. Подаются вместе с чаем во время семейных праздников.</p>
+                                    <p>Димсамы делают из свинины и китайской капусты, морепродуктов или фруктов. Готовятся из недрожжевого теста без яиц. Подаются с чаем во время семейных праздников.</p>
                                     <h6>1000₽ / 13 шт.</h6>
                                 </div>
                             </div>
@@ -89,7 +101,7 @@
                                 <div class="img"></div>
                                 <div class="description">
                                     <h3>Сяо Лун Бао</h3>
-                                    <p>Внешне напоминают хинкали, внутри сохраняют бульон. Их тесто очень тонкое в, качестве начинки кладут мясо, морепродукты или овощи.
+                                    <p>Напоминают хинкали, тесто очень тонкое в качестве начинки кладут мясо, морепродукты или овощи.
                                         Подается с соевым, рисовым соусами или кунжутным маслом.</p>
                                     <h6>300₽ / 3 шт.</h6>
                                 </div>

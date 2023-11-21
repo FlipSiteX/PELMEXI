@@ -1,4 +1,4 @@
-const anchors = document.querySelectorAll('a[href*="#"]')
+const anchors = document.querySelectorAll('.anchor')
 for (let anchor of anchors) {
     anchor.addEventListener('click', function (e) {
         e.preventDefault()
