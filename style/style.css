@@ -300,7 +300,7 @@ header nav {
 }
 
 .cardBlock:last-child .itemCard:nth-child(1) .img {
-    background-image: url("../img/цзяоцзы.jfif");
+    background-image: url("../img/шаомай.jfif");
 }
 
 .cardBlock:last-child .itemCard:nth-child(2) .img {
@@ -807,6 +807,10 @@ footer nav a:hover svg {
 
     .menu .cardBlock .itemCard:last-child {
         margin-top: 20px;
+    }
+
+    .cardBlock:last-child .itemCard:nth-child(1) .img {
+        background-position: top;
     }
 
 }
