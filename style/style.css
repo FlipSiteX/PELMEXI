@@ -130,7 +130,7 @@ header nav {
 }
 
 .welcome h1 {
-    font-size: clamp(1.5rem, 0.227rem + 6.36vw, 5rem);
+    font-size: clamp(1.5rem, 0.852rem + 3.46vw, 5rem);
     line-height: 115%;
     text-shadow: 2px 4px black;
 }
